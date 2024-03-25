@@ -2,7 +2,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>Balo VHT</title>
+    <head>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,7 +14,7 @@
         <!--begin of menu-->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="home">Shoes</a>
+                <a class="navbar-brand" href="home">VHT BALO</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -149,7 +149,7 @@
                         <h5>Others links</h5>
                         <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
                         <ul class="list-unstyled">
-                            <li><a href="">Link 1</a></li>
+                            <li><a href="">Link cc</a></li>
                             <li><a href="">Link 2</a></li>
                             <li><a href="">Link 3</a></li>
                             <li><a href="">Link 4</a></li>
@@ -168,7 +168,7 @@
 </div>
                     <div class="col-12 copyright mt-3">
                         <p class="float-left">
-                            <a href="#">Back to top</a>
+                            <a class="btn btn-outline-success" href="#">Back to top</a>
                         </p>
                         <p class="text-right text-muted">created with <i class="fa fa-heart"></i> by <a href="https://t-php.fr/43-theme-ecommerce-bootstrap-4.html"><i>VHT</i></a> | <span>v. 1.0</span></p>
                     </div>
