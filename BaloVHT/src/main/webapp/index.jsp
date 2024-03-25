@@ -9,7 +9,7 @@
 <body>
     <%@ page import = "model.User" %>
     <%  
-	    response.sendRedirect("login");
+	    response.sendRedirect("Login");
     %>  
 </body>
 </html>

@@ -52,7 +52,7 @@
 				out.print(request.getAttribute("error").toString()); 
 		%>
 	</h6>
-	<form action="/BaloVHT/login" method="post">
+	<form action="Login" method="post">
 		<div class="mb-3 mt-3">
 			<label for="email" class="form-label">Email:</label> <input
 				type="email" class="form-control" id="email"
