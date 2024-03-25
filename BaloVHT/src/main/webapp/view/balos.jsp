@@ -51,7 +51,6 @@
 				<button type="submit" class="btn btn-primary" name="button" value="close">Đóng</button>
 
 			</div>
-			
 		</form>
 	</div>
 	
