@@ -35,6 +35,7 @@
   </servlet-mapping>
   <servlet>
     <description></description>
+<<<<<<< HEAD
     <display-name>BaloController</display-name>
     <servlet-name>BaloController</servlet-name>
     <servlet-class>controller.BaloController</servlet-class>
@@ -43,5 +44,15 @@
     <servlet-name>BaloController</servlet-name>
     <url-pattern>/BaloController</url-pattern>
         <url-pattern>/Balo</url-pattern>
+=======
+    <display-name>CartController</display-name>
+    <servlet-name>CartController</servlet-name>
+    <servlet-class>controller.CartController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CartController</servlet-name>
+    <url-pattern>/Cart</url-pattern>
+    <url-pattern>/giohang</url-pattern>
+>>>>>>> branch 'master' of https://github.com/0Shineal0/VHTBalo.git
   </servlet-mapping>
 </web-app>
