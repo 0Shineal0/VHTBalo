@@ -25,7 +25,7 @@
                             <a class="nav-link" href="#">Manager Account</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="book">Balo</a>
+                            <a class="nav-link" href="Balo">Balo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Logout</a>
