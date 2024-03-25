@@ -66,12 +66,8 @@
                             <a class="nav-link" href="#">Manager Account</a>
                         </li>
                         <li class="nav-item">
-<<<<<<< HEAD
                             <a class="nav-link" href="Balo">Balo</a>
-=======
-                            <a class="nav-link" href="#">Balo</a>
->>>>>>> branch 'master' of https://github.com/0Shineal0/VHTBalo.git
-                        </li>
+                            <a class="nav-link" href="#">Balo</a></li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Logout</a>
                         </li>
