@@ -64,7 +64,7 @@ public class LoginController extends HttpServlet {
         boolean status = user.validate();
         
         if(status){  
-        	response.sendRedirect("home");
+        	response.sendRedirect("Home");
         }  
         else{  
             RequestDispatcher rd=request.getRequestDispatcher("/view/login-error.jsp");  
