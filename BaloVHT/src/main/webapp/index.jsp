@@ -11,6 +11,5 @@
     <%  
 	    response.sendRedirect("Login");
     %>  
-    //Helo 
 </body>
 </html>

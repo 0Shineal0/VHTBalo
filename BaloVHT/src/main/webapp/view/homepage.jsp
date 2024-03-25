@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html >
     <head>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -9,8 +9,49 @@
         <!------ Include the above in your HEAD tag ---------->
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <!------ chữ di chuyển  ---------->
+          <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    @keyframes moveLeft {
+      0% {
+        transform: translateX(-70%);
+      }
+      100% {
+        transform: translateX(-190%);
+      }
+    }
+
+    .moving-text {
+      animation: moveLeft 5s linear infinite;
+      font-size: 20px; /* Chỉnh cỡ chữ */
+      color: #ff0000; /* Chỉnh màu chữ */
+      white-space: nowrap; /* Ngăn chữ bị xuống hàng */
+	  font-family: "Times New Roman", Times, serif; /* Thay đổi font chữ */    }
+    .static-text {
+      position: absolute; /* Đặt phần tử con làm absolute */
+      top: 0; /* Đặt top là 0 */
+      right: -380px; /* Đặt right là 0 */
+      font-size: 20px; /* Chỉnh cỡ chữ */
+      color: #000000; /* Màu chữ đen */
+      font-family: "Times New Roman", Times, serif; /* Thay đổi font chữ */
+    }
+    
+  </style>
+        
     </head>
     <body>
+    <div class="container ">
+    <div class="row justify-content-center">
+      <div class="col-6 text-center">
+        <h1 class="moving-text">Bạn muốn có balo xịn ư, hãy đến với shop BALO chính hãng của chúng tôi</h1>
+        <p class="static-text">Phân phối đến 63 tỉnh thành trên toàn quốc</p>
+      </div>
+    </div>
+  </div>
         <!--begin of menu-->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container">
@@ -25,7 +66,11 @@
                             <a class="nav-link" href="#">Manager Account</a>
                         </li>
                         <li class="nav-item">
+<<<<<<< HEAD
                             <a class="nav-link" href="Balo">Balo</a>
+=======
+                            <a class="nav-link" href="#">Balo</a>
+>>>>>>> branch 'master' of https://github.com/0Shineal0/VHTBalo.git
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Logout</a>
@@ -64,7 +109,7 @@
                 <div class="col">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="Home.jsp">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
                             <li class="breadcrumb-item"><a href="#">Category</a></li>
                             <li class="breadcrumb-item active" aria-current="#">Sub-category</li>
                         </ol>
