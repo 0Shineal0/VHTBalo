@@ -17,17 +17,17 @@
 </head>
 <body>
 
-	<div class="container" style="width: 50%">
+	<div class="container" style="width: 70%">
 		<form action="Balo" method="POST">
 			<input type="hidden" id="currBaloID" name="currBaloID">
 			<table class="table table-striped">
 				<thead>
 					<tr>
-						<th scope="row">Mã Balo</th>
-						<th scope="row">Hình Balo</th>
-						<th scope="row">Tên Balo</th>
-						<th scope="row">Giá</th>
-						<th scope="row">Mô tả Balo</th>
+						<th scope="row" style="white-space: nowrap	">Mã Balo</th>
+						<th scope="row" style="white-space: nowrap">Hình Balo</th>
+						<th scope="row"style="white-space: nowrap">Tên Balo</th>
+						<th scope="row"style="white-space: nowrap">Giá</th>
+						<th scope="row"style="white-space: nowrap">Mô tả Balo</th>
 					</tr>
 				</thead>
 				<tbody>
