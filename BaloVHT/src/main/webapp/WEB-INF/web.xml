@@ -33,7 +33,7 @@
     <servlet-name>LoginController</servlet-name>
     <url-pattern>/BaloVHT/view/login</url-pattern>
   </servlet-mapping>
-   <servlet>
+  <servlet>
     <display-name>CartController</display-name>
     <servlet-name>CartController</servlet-name>
     <servlet-class>controller.CartController</servlet-class>
@@ -42,5 +42,15 @@
     <servlet-name>CartController</servlet-name>
     <url-pattern>/Cart</url-pattern>
     <url-pattern>/giohang</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BaloController</display-name>
+    <servlet-name>BaloController</servlet-name>
+    <servlet-class>controller.BaloController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BaloController</servlet-name>
+    <url-pattern>/Balo</url-pattern>
   </servlet-mapping>
 </web-app>
