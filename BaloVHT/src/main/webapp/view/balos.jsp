@@ -25,38 +25,44 @@
 					<tr>
 						<th scope="col">Mã Sách</th>
 						<th scope="col">Hình ảnh</th>
-						<th scope="col">Tên sách</th>						
+						<th scope="col">Tên sách</th>
 						<th scope="col">Giá</th>
-
+						<th scope="col">Mô tả</th>
 					</tr>
 				</thead>
 				<tbody>
 
 					<c:forEach items="${balos}" var="balo">
-						<tr id = "${balo.id}" onclick="rowClick(this)">
+						<tr id="${balo.id}" onclick="rowClick(this)">
 							<td><c:out value="${balo.id}" /></td>
-							 <td><img src="${balo.image}" alt="Hình ảnh balo" style="max-width: 100px; max-height: 100px;"></td>
+							<td><img src="${balo.image}" alt="Hình ảnh balo"
+								style="max-width: 100px; max-height: 100px;"></td>
 							<td><c:out value="${balo.name}" /></td>
 							<td><c:out value="${balo.price}" /></td>
+							<td><c:out value="${balo.mota}" /></td>
 						</tr>
 					</c:forEach>
 				</tbody>
 			</table>
 			<div style="float: right;">
 
-				<button type="submit" class="btn btn-primary" name="button" value="add">Thêm</button>
-				<button type="submit" class="btn btn-primary" name="button" value="delete">Xóa</button>
-				<button type="submit" class="btn btn-primary" name="button" value="edit">Chỉnh sửa</button>
-				<button type="submit" class="btn btn-primary" name="button" value="close">Đóng</button>
+				<button type="submit" class="btn btn-primary" name="button"
+					value="add">Thêm</button>
+				<button type="submit" class="btn btn-primary" name="button"
+					value="delete">Xóa</button>
+				<button type="submit" class="btn btn-primary" name="button"
+					value="edit">Chỉnh sửa</button>
+				<button type="submit" class="btn btn-primary" name="button"
+					value="close">Đóng</button>
 
 			</div>
-			
+
 		</form>
 	</div>
-	
+
 	<script type="text/javascript">
-		function rowClick(e){
-			document.getElementById("currBookID").value =e.id;
+		function rowClick(e) {
+			document.getElementById("currBookID").value = e.id;
 		}
 	</script>
 

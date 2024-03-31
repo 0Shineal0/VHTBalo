@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
+ <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
@@ -42,7 +42,10 @@
 				<label class="form-label">Giá bán</label> 
 				<input type="text" class="form-control" placeholder="Nhập giá bán" name ="price"  value="<%= balo.getPrice()%>"/>
 			</div>
-			
+			<div >
+				<label class="form-label">Mô tả</label> 
+				<input type="text" class="form-control" placeholder="Nhập mô tả" name ="mota"  value="<%= balo.getMota()%>"/>
+			</div>
 			<div style="float: right;">
 				<button type="submit" class="btn btn-primary" name="button" value="save">Lưu</button>
 				<button type="submit" class="btn btn-primary" name="button" value="closebook">Đóng</button>

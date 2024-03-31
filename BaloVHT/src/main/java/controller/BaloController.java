@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import model.Balo;
-
+import service.BaloService;
 import java.io.IOException;
 import java.util.List;
 
@@ -73,7 +73,7 @@ String button = request.getParameter("button");
 		String currID = request.getParameter("currBookID");
 		request.setAttribute("currBookID", currID);
 	    if (currID != null && !currID.isEmpty()) {
-	        Balo baloToDelete = new Balo(currID, "","", 0);
+	        Balo baloToDelete = new Balo(currID, "","", 0,"");
 	        boolean deleteSuccess = Balos.delete(baloToDelete);
 	        if (deleteSuccess) {
 	            showBalos(request, response);
@@ -81,7 +81,6 @@ String button = request.getParameter("button");
 	    }
 	}
 
-	
 	private void showBalos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<Balo> balos = Balos.getAll();
 		request.setAttribute("balos", balos);
@@ -107,7 +106,8 @@ String button = request.getParameter("button");
 		String image = request.getParameter("image").toString();
 		String name = request.getParameter("name").toString();
 		double price = Double.parseDouble(request.getParameter("price").toString());
-		Balo balo = new Balo(id,image,name,price);
+		String mota = request.getParameter("mota").toString();
+		Balo balo = new Balo(id,image,name,price,mota);
 		
 		Balos.save(balo);
 	}

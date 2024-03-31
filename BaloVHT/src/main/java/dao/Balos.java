@@ -9,11 +9,11 @@ import java.util.List;
 import model.Balo;
 import utils.DataHelper;
 public class Balos {
-	private static final String SELECT_BY_ID = "select id,image,name,price from balovht.balo where id =?";
+	private static final String SELECT_BY_ID = "select id,image,name,price,mota from balovht.balo where id =?";
 	private static final String SELECT_ALL = "select * from balovht.balo";
 	private static final String DELETE = "delete from balovht.balo where id = ?;";
-	private static final String UPDATE = "update balovht.balo set image = ?, name = ?,price= ? where id = ?;";
-	private static final String INSERT = "insert into balovht.balo(id,image,name,price) value (?, ?, ?, ?) ;";
+	private static final String UPDATE = "update balovht.balo set image = ?, name = ?,price= ?, mota = ? where id = ?;";
+	private static final String INSERT = "insert into balovht.balo(id,image,name,price,mota) value (?, ?, ?, ?, ?) ;";
 	
 	public static Balo getBalo(String id) {
 		try {
@@ -25,7 +25,8 @@ public class Balos {
 				String name = rs.getString("name");
 				String image = rs.getString("image");
 				double price =  rs.getDouble("price");
-				return new Balo(id,image,name,price);
+				String mota = rs.getString("mota");
+				return new Balo(id,image,name,price,mota);
 			}
 
 			}catch (Exception e) {
@@ -47,8 +48,8 @@ public class Balos {
 				String name = rs.getString("name");
 				String image = rs.getString("image");
 				double price =  rs.getDouble("price");
-				
-				balos.add(new Balo(id,image, name, price));
+				String mota = rs.getString("mota");
+				balos.add(new Balo(id,image, name, price, mota));
 			}
 
 			}catch (Exception e) {
@@ -64,6 +65,7 @@ public class Balos {
 			preparedStatement.setString(2, balo.getImage());
 			preparedStatement.setString(3, balo.getName());
 			preparedStatement.setDouble(4, balo.getPrice());
+			preparedStatement.setString(5, balo.getMota());			
 			String sql = preparedStatement.toString();
 			return preparedStatement.execute();
 			
@@ -82,7 +84,8 @@ public class Balos {
 			preparedStatement.setString(1, balo.getImage());
 			preparedStatement.setString(2, balo.getName());
 			preparedStatement.setDouble(3, balo.getPrice());
-			preparedStatement.setString(4, balo.getId());
+			preparedStatement.setString(4, balo.getMota());			
+			preparedStatement.setString(5, balo.getId());
 			String sql = preparedStatement.toString();
 			return preparedStatement.execute();
 			
