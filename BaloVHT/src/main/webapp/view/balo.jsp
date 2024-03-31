@@ -22,7 +22,6 @@
 	    String id=request.getParameter("currBookID"); 
     	System.out.print(id);
 		Balo balo = Balos.getBalo(id);
-		
     %>
 	<form action="Balo" method="post">
 		<div class="container" style="width: 50%; justify-content: center;">

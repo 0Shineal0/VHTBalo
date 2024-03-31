@@ -34,26 +34,36 @@ keyframes moveLeft { 0% {
 100
 
 
+
+
 %
 {
 transform
 
 
+
+
 :
 
 
+
+
 translateX
+
+
 (
 
 
+
+
 -190
+
+
 %
-
-
 )
+
+
 ;
-
-
 }
 }
 .moving-text {
@@ -103,7 +113,7 @@ translateX
 					<li class="nav-item"><a class="nav-link" href="#">Manager
 							Account</a></li>
 					<li class="nav-item"><a class="nav-link" href="Balo">Balo</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+					<li class="nav-item"><a class="nav-link" href="Login">Logout</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Login</a></li>
 				</ul>
 
