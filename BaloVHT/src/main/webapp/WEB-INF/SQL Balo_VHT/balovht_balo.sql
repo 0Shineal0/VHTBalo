@@ -24,10 +24,10 @@ DROP TABLE IF EXISTS `balo`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `balo` (
   `id` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
-  `image` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
-  `price` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
-  `describe` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `price` double DEFAULT NULL,
+  `mota` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -38,7 +38,7 @@ CREATE TABLE `balo` (
 
 LOCK TABLES `balo` WRITE;
 /*!40000 ALTER TABLE `balo` DISABLE KEYS */;
-INSERT INTO `balo` VALUES ('1','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQET1XNbqa9d6ra30vxBeAWYix5rrkcq4SxyA&usqp=CAU','Balo1','123','abc'),('2','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv5Uzy3XOniEhn-j8TGCcMfAkGe5fLvl9rkA&usqp=CAU','Balo2','456','xyz');
+INSERT INTO `balo` VALUES ('1','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv5Uzy3XOniEhn-j8TGCcMfAkGe5fLvl9rkA&usqp=CAU','Balo1',123,'abc'),('10','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv5Uzy3XOniEhn-j8TGCcMfAkGe5fLvl9rkA&usqp=CAU','Balo1',123,'abc'),('2','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQET1XNbqa9d6ra30vxBeAWYix5rrkcq4SxyA&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQET1XNbqa9d6ra30vxBeAWYix5rrkcq4SxyA&usqp=CAU','Balo23',456,'ass'),('8','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv5Uzy3XOniEhn-j8TGCcMfAkGe5fLvl9rkA&usqp=CAU','Balo1',123,'abc'),('9','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv5Uzy3XOniEhn-j8TGCcMfAkGe5fLvl9rkA&usqp=CAU','Balo1',123,'abc');
 /*!40000 ALTER TABLE `balo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-25 18:11:21
+-- Dump completed on 2024-04-01  1:54:51

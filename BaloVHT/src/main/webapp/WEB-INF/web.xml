@@ -19,7 +19,8 @@
     <servlet-name>HomeController</servlet-name>
     <url-pattern>/Home</url-pattern>
   </servlet-mapping>
-  <servlet>
+<servlet>
+
     <description></description>
     <display-name>LoginController</display-name>
     <servlet-name>LoginController</servlet-name>
@@ -29,20 +30,18 @@
     <servlet-name>LoginController</servlet-name>
     <url-pattern>/Login</url-pattern>
   </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>LoginController</servlet-name>
-    <url-pattern>/BaloVHT/view/login</url-pattern>
-  </servlet-mapping>
   <servlet>
-    <display-name>CartController</display-name>
-    <servlet-name>CartController</servlet-name>
-    <servlet-class>controller.CartController</servlet-class>
+  
+    <description></description>
+    <display-name>RegisterController</display-name>
+    <servlet-name>RegisterController</servlet-name>
+    <servlet-class>controller.RegisterController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>CartController</servlet-name>
-    <url-pattern>/Cart</url-pattern>
-    <url-pattern>/giohang</url-pattern>
+    <servlet-name>RegisterController</servlet-name>
+    <url-pattern>/Register</url-pattern>
   </servlet-mapping>
+
   <servlet>
     <description></description>
     <display-name>BaloController</display-name>
@@ -52,5 +51,17 @@
   <servlet-mapping>
     <servlet-name>BaloController</servlet-name>
     <url-pattern>/Balo</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>DetailController</display-name>
+    <servlet-name>DetailController</servlet-name>
+    <servlet-class>controller.DetailController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DetailController</servlet-name>
+    <url-pattern>/Detail</url-pattern>
+    <url-pattern>/detail</url-pattern>
   </servlet-mapping>
 </web-app>
