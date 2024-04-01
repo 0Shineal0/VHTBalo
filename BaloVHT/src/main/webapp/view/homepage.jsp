@@ -26,61 +26,30 @@
 	rel="stylesheet">
 <!-- Custom CSS -->
 <style>
-@
-keyframes moveLeft { 0% {
-	transform: translateX(-70%);
+@keyframes moveLeft {
+    0% {
+        transform: translateX(-70%);
+    }
+    100% {
+        transform: translateX(-190%);
+    }
 }
 
-100
-
-
-
-
-%
-{
-transform
-
-
-
-
-:
-
-
-
-
-translateX
-
-
-(
-
-
-
-
--190
-
-
-%
-)
-
-
-;
-}
-}
 .moving-text {
-	animation: moveLeft 5s linear infinite;
-	font-size: 20px; /* Chỉnh cỡ chữ */
-	color: #ff0000; /* Chỉnh màu chữ */
-	white-space: nowrap; /* Ngăn chữ bị xuống hàng */
-	font-family: "Times New Roman", Times, serif; /* Thay đổi font chữ */
+    animation: moveLeft 5s linear infinite;
+    font-size: 20px; /* Chỉnh cỡ chữ */
+    color: #ff0000; /* Chỉnh màu chữ */
+    white-space: nowrap; /* Ngăn chữ bị xuống hàng */
+    font-family: "Times New Roman", Times, serif; /* Thay đổi font chữ */
 }
 
 .static-text {
-	position: absolute; /* Đặt phần tử con làm absolute */
-	top: 0; /* Đặt top là 0 */
-	right: -380px; /* Đặt right là 0 */
-	font-size: 20px; /* Chỉnh cỡ chữ */
-	color: #000000; /* Màu chữ đen */
-	font-family: "Times New Roman", Times, serif; /* Thay đổi font chữ */
+    position: absolute; /* Đặt phần tử con làm absolute */
+    top: 0; /* Đặt top là 0 */
+    right: -380px; /* Đặt right là 0 */
+    font-size: 20px; /* Chỉnh cỡ chữ */
+    color: #000000; /* Màu chữ đen */
+    font-family: "Times New Roman", Times, serif; /* Thay đổi font chữ */
 }
 </style>
 
