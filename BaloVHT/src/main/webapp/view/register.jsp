@@ -139,37 +139,46 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
   <script type="text/javascript">
-    function togglePassVisibility() {
-      var repassInput = document.getElementById("repass");
-      if (repassInput.type === "password") {
-        repassInput.type = "text";
-      } else {
-        repassInput.type = "password";
-      }
+  function togglePassVisibility() {
+    var repassInput = document.getElementById("repass");
+    if (repassInput.type === "password") {
+      repassInput.type = "text";
+    } else {
+      repassInput.type = "password";
+    }
+  }
+
+  function validateForm() {
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("pw").value;
+    var repass = document.getElementById("repass").value;
+
+    if (email.trim() === "" || password.trim() === "" || repass.trim() === "") {
+      swal("Error", "Please fill in all fields", "error");
+      return false;
     }
 
-    function validateForm() {
-      var email = document.getElementById("email").value;
-      var password = document.getElementById("pw").value;
-      var repass = document.getElementById("repass").value;
-
-      if (email.trim() === "" || password.trim() === "" || repass.trim() === "") {
-        swal("Error", "Please fill in all fields", "error");
-        return false;
-      }
-
-      if (password !== repass) {
-        swal("Error", "Passwords do not match", "error");
-        return false;
-      }
-
-      return true;
+    if (password !== repass) {
+      swal("Error", "Passwords do not match", "error");
+      return false;
     }
 
-    var status = document.getElementById("status").value;
-    if (status == "success") {
-      swal("Congrats", "Account Created Successfully", "success");
-    }
-  </script>
+    return true;
+  }
+
+  var status = document.getElementById("status").value;
+  if (status == "success") {
+    swal({
+      title: "Congrats",
+      text: "Account Created Successfully",
+      icon: "success",
+      button: "OK",
+    }).then((value) => {
+      if (value) {
+        window.location.href = "Login"; // Chuyển hướng đến trang Login
+      }
+    });
+  }
+</script>
 </body>
 </html>

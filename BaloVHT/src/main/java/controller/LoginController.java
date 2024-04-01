@@ -53,8 +53,9 @@ public class LoginController extends HttpServlet {
         
         boolean status = user.validate();
         
-        if (status) {
-            // Chuyển hướng người dùng đến trang Home
+        if (status && email.equals("admin@gmail.com")) {
+            response.sendRedirect("Balo");
+        } else if (status) {
             response.sendRedirect("Home"); // Thay đổi đường dẫn tùy theo cấu trúc thư mục của bạn
         } else {
             // Set error message if login fails
