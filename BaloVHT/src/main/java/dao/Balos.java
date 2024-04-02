@@ -57,6 +57,31 @@ public class Balos {
 		}
 		return balos;
 	}
+	
+	public static Balo getById(String id) {
+	    Balo balo = null;
+	    try {
+	        Connection conn = DataHelper.getConnection();
+	        PreparedStatement stmt = conn.prepareStatement(SELECT_BY_ID);
+	        stmt.setString(1, id);
+	        ResultSet rs = stmt.executeQuery();
+	        if (rs.next()) {
+	            String name = rs.getString("name");
+	            String image = rs.getString("image");
+	            double price = rs.getDouble("price");
+	            String mota = rs.getString("mota");
+	            balo = new Balo(id, image, name, price, mota);
+	        }
+	        rs.close();
+	        stmt.close();
+	        conn.close();
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	    return balo;
+	}
+
+	
 	public static boolean create(Balo balo) {
 		try {
 			Connection conn = DataHelper.getConnection();
@@ -135,4 +160,5 @@ public class Balos {
 		}
 		return false;
 	}
+	
 }

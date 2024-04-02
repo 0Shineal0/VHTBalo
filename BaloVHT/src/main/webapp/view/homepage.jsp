@@ -28,43 +28,38 @@
 <style>
 @keyframes moveLeft {
     0% {
-        transform: translateX(-70%);
+        transform: translateX(100%);
     }
     100% {
-        transform: translateX(-190%);
+        transform: translateX(-100%);
     }
 }
 
+
 .moving-text {
-    animation: moveLeft 5s linear infinite;
+    animation: moveLeft 30s linear infinite;
     font-size: 20px; /* Chỉnh cỡ chữ */
-    color: #ff0000; /* Chỉnh màu chữ */
+    color: #6633FF; /* Chỉnh màu chữ */
     white-space: nowrap; /* Ngăn chữ bị xuống hàng */
     font-family: "Times New Roman", Times, serif; /* Thay đổi font chữ */
 }
 
-.static-text {
-    position: absolute; /* Đặt phần tử con làm absolute */
-    top: 0; /* Đặt top là 0 */
-    right: -380px; /* Đặt right là 0 */
-    font-size: 20px; /* Chỉnh cỡ chữ */
-    color: #000000; /* Màu chữ đen */
-    font-family: "Times New Roman", Times, serif; /* Thay đổi font chữ */
-}
 </style>
 
-</head>
+ <script type="text/javascript">
+        // Đoạn mã JavaScript ở đây
+        // Lấy ra các ký tự của moving-text
+        const text = document.querySelector('.moving-text').textContent.trim();
+
+        // Tạo ra các phần tử span cho từng ký tự và thêm vào moving-text-container
+        document.querySelector('.moving-text').innerHTML = '';
+        text.split('').forEach(char => {
+            const span = document.createElement('span');
+            span.textContent = char === ' ' ? '\u00A0' : char; // thêm một khoảng trắng không thể linh động
+            document.querySelector('.moving-text').appendChild(span);
+        });
+    </script>
 <body>
-	<div class="container ">
-		<div class="row justify-content-center">
-			<div class="col-6 text-center">
-				<h1 class="moving-text">Bạn muốn có balo xịn ư, hãy đến với
-					shop BALO chính hãng của chúng tôi</h1>
-				<p class="static-text">Phân phối đến 63 tỉnh thành trên toàn
-					quốc</p>
-			</div>
-		</div>
-	</div>
 	<!--begin of menu-->
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
 		<div class="container">
@@ -112,7 +107,9 @@
 				hơn 10 năm cung cấp các sản phầm balo nhập từ Pháp</p>
 		</div>
 	</section>
-	<!--end of menu-->
+        <div class="moving-text"><b>Bạn muốn có balo xịn ư, hãy đến với shop BALO chính hãng của chúng tôi. Phân phối đến 63 tỉnh thành trên toàn quốc</b></div>
+
+		<!--end of menu-->
 	<div class="container">
 		<div class="row">
 			<div class="col">
@@ -161,7 +158,7 @@
 									alt="Card image cap">
 								<div class="card-body">
 									<h4 class="card-title show_txt">
-										<a href="#" title="View Product"><c:out
+										<a href="Detail?pid=${homepage.id}" title="View Product"><c:out
 												value="${homepage.name}" /></a>
 									</h4>
 									<p class="card-text show_txt">
@@ -188,7 +185,7 @@
 	</div>
 
 	<!-- Footer -->
-	<footer class="text-light">
+	<footer class="jumbotron text-center">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3 col-lg-4 col-xl-3">
