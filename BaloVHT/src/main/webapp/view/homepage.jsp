@@ -17,6 +17,9 @@
 	integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
 	crossorigin="anonymous">
 <link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+
 <!------ chữ di chuyển  ---------->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,27 +29,31 @@
 	rel="stylesheet">
 <!-- Custom CSS -->
 <style>
-@keyframes moveLeft {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+@
+keyframes moveLeft { 0% {
+	transform: translateX(100%);
 }
 
-
+100
+%
+{
+transform
+:
+translateX(
+-100%
+);
+}
+}
 .moving-text {
-    animation: moveLeft 30s linear infinite;
-    font-size: 20px; /* Chỉnh cỡ chữ */
-    color: #6633FF; /* Chỉnh màu chữ */
-    white-space: nowrap; /* Ngăn chữ bị xuống hàng */
-    font-family: "Times New Roman", Times, serif; /* Thay đổi font chữ */
+	animation: moveLeft 30s linear infinite;
+	font-size: 20px; /* Chỉnh cỡ chữ */
+	color: #6633FF; /* Chỉnh màu chữ */
+	white-space: nowrap; /* Ngăn chữ bị xuống hàng */
+	font-family: "Times New Roman", Times, serif; /* Thay đổi font chữ */
 }
-
 </style>
 
- <script type="text/javascript">
+<script type="text/javascript">
         // Đoạn mã JavaScript ở đây
         // Lấy ra các ký tự của moving-text
         const text = document.querySelector('.moving-text').textContent.trim();
@@ -107,9 +114,12 @@
 				hơn 10 năm cung cấp các sản phầm balo nhập từ Pháp</p>
 		</div>
 	</section>
-        <div class="moving-text"><b>Bạn muốn có balo xịn ư, hãy đến với shop BALO chính hãng của chúng tôi. Phân phối đến 63 tỉnh thành trên toàn quốc</b></div>
+	<div class="moving-text">
+		<b>Bạn muốn có balo xịn ư, hãy đến với shop BALO chính hãng của
+			chúng tôi. Phân phối đến 63 tỉnh thành trên toàn quốc</b>
+	</div>
 
-		<!--end of menu-->
+	<!--end of menu-->
 	<div class="container">
 		<div class="row">
 			<div class="col">
@@ -157,19 +167,25 @@
 								<img class="card-img-top" src="${homepage.image}"
 									alt="Card image cap">
 								<div class="card-body">
-									<h4 class="card-title show_txt">
-										<a href="Detail?pid=${homepage.id}" title="View Product"><c:out
-												value="${homepage.name}" /></a>
+									<h4 class="card-title show_txt"
+										style="text-align: center;">
+										<a href="Detail?pid=${homepage.id}"  style="color: #6633FF;" title="View Product">
+											<c:out value="${homepage.name}" />
+										</a>
 									</h4>
-									
-									<div class="row">
-										<div class="col">
-											<p class="btn btn-danger btn-block">
+									<div class="d-flex justify-content-between align-items-center">
+										<div>
+											<p class="btn btn-primary">
+												<i class="material-icons align-items-center"
+													style="font-size: 12px;"></i>
 												<c:out value="${homepage.price}$" />
 											</p>
 										</div>
-										<div class="col">
-											<a href="#" class="btn btn-success btn-block">Add to cart</a>
+										<div>
+											<p href="#" class="btn btn-success btn-block">
+												<i class="material-icons align-items-center"
+													style="font-size: 12px;">&#xE8CC;</i> Add to cart
+											</p>
 										</div>
 									</div>
 								</div>
@@ -178,6 +194,7 @@
 					</c:forEach>
 				</div>
 			</div>
+
 
 		</div>
 	</div>
@@ -189,18 +206,22 @@
 				<div class="col-md-3 col-lg-4 col-xl-3">
 					<h5>About</h5>
 					<hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-					<p class="mb-0">Công ty của chúng tôi đã thành lập được 10 năm và
-					cung cấp hàng chất lượng chính hãng đến toàn thể khách hàng.</p>
+					<p class="mb-0">Công ty của chúng tôi đã thành lập được 10 năm
+						và cung cấp hàng chất lượng chính hãng đến toàn thể khách hàng.</p>
 				</div>
 
 				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
 					<h5>Nhà Phát Triển</h5>
 					<hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
 					<ul class="list-unstyled">
-						<li><a href="https://www.facebook.com/profile.php?id=100080908811496"><span style="white-space: nowrap;">AKA: VƯƠNG VUI VẺ</span></a></li>
-						<li><a href="https://www.facebook.com/ren.legends.92/about/"><span style="white-space: nowrap;">AKA: HOÀNG HÓNG HỚT</span></a></li>
-						<li><a href="https://www.facebook.com/shin.me.kayuha"><span style="white-space: nowrap;">AKA: TƯỚC TĂNG TIẾN </span></a></li>
-						
+						<li><a
+							href="https://www.facebook.com/profile.php?id=100080908811496"><span
+								style="white-space: nowrap;">AKA: VƯƠNG VUI VẺ</span></a></li>
+						<li><a href="https://www.facebook.com/ren.legends.92/about/"><span
+								style="white-space: nowrap;">AKA: HOÀNG HÓNG HỚT</span></a></li>
+						<li><a href="https://www.facebook.com/shin.me.kayuha"><span
+								style="white-space: nowrap;">AKA: TƯỚC TĂNG TIẾN </span></a></li>
+
 					</ul>
 				</div>
 
@@ -219,7 +240,8 @@
 					<hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
 					<ul class="list-unstyled">
 						<li><i class="fa fa-home mr-2"></i> VHT COMPANY</li>
-						<li><i class="fa fa-envelope mr-2"></i> vanlangsaigon@gmail.com</li>
+						<li><i class="fa fa-envelope mr-2"></i>
+							vanlangsaigon@gmail.com</li>
 						<li><i class="fa fa-phone mr-2"></i> + 086.2310.727</li>
 						<li><i class="fa fa-print mr-2"></i> + 039.6768.360</li>
 					</ul>
