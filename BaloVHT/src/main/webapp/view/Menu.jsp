@@ -16,11 +16,9 @@
 			<div class="collapse navbar-collapse justify-content-end"
 				id="navbarsExampleDefault">
 				<ul class="navbar-nav m-auto">
-					<li class="nav-item"><a class="nav-link" href="#">Manager
-							Account</a></li>
-					<li class="nav-item"><a class="nav-link" href="Balo">Balo</a></li>
+					<li class="nav-item"><a class="nav-link" href="Home">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="Login">Logout</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+					<li class="nav-item"><a class="nav-link" href="Cart">Cart</a></li>
 				</ul>
 
 				<form action="search" method="post" class="form-inline my-2 my-lg-0">

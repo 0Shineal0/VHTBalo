@@ -35,13 +35,28 @@ keyframes moveLeft { 0% {
 }
 
 100
+
+
 %
 {
 transform
+
+
 :
-translateX(
--100%
-);
+
+
+translateX
+(
+
+
+-100
+%
+
+
+)
+;
+
+
 }
 }
 .moving-text {
@@ -52,7 +67,7 @@ translateX(
 	font-family: "Times New Roman", Times, serif; /* Thay đổi font chữ */
 }
 </style>
-
+<script src="path/to/cart.js"></script>
 <script type="text/javascript">
         // Đoạn mã JavaScript ở đây
         // Lấy ra các ký tự của moving-text
@@ -81,11 +96,9 @@ translateX(
 			<div class="collapse navbar-collapse justify-content-end"
 				id="navbarsExampleDefault">
 				<ul class="navbar-nav m-auto">
-					<li class="nav-item"><a class="nav-link" href="#">Manager
-							Account</a></li>
-					<li class="nav-item"><a class="nav-link" href="Balo">Balo</a></li>
+					<li class="nav-item"><a class="nav-link" href="Home">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="Login">Logout</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+					<li class="nav-item"><a class="nav-link" href="Cart">Cart</a></li>
 				</ul>
 
 				<form action="search" method="post" class="form-inline my-2 my-lg-0">
@@ -114,6 +127,7 @@ translateX(
 				hơn 10 năm cung cấp các sản phầm balo nhập từ Pháp</p>
 		</div>
 	</section>
+
 	<div class="moving-text">
 		<b>Bạn muốn có balo xịn ư, hãy đến với shop BALO chính hãng của
 			chúng tôi. Phân phối đến 63 tỉnh thành trên toàn quốc</b>
@@ -167,25 +181,21 @@ translateX(
 								<img class="card-img-top" src="${homepage.image}"
 									alt="Card image cap">
 								<div class="card-body">
-									<h4 class="card-title show_txt"
-										style="text-align: center;">
-										<a href="Detail?pid=${homepage.id}"  style="color: #6633FF;" title="View Product">
-											<c:out value="${homepage.name}" />
+									<h4 class="card-title show_txt" style="text-align: center;">
+										<a href="Detail?pid=${homepage.id}" style="color: #6633FF;"
+											title="View Product"> <c:out value="${homepage.name}" />
 										</a>
 									</h4>
 									<div class="d-flex justify-content-between align-items-center">
 										<div>
-											<p class="btn btn-primary">
-												<i class="material-icons align-items-center"
-													style="font-size: 12px;"></i>
-												<c:out value="${homepage.price}$" />
-											</p>
+											<a class="btn btn-primary text-white"> <i
+												class="material-icons align-items-center"
+												style="font-size: 12px;"></i> <c:out
+													value="${homepage.price}$" />
+											</a>
 										</div>
 										<div>
-											<p href="#" class="btn btn-success btn-block">
-												<i class="material-icons align-items-center"
-													style="font-size: 12px;">&#xE8CC;</i> Add to cart
-											</p>
+											<a href="Cart?productId=${homepage.id}" class="btn btn-success btn-block"> <i class="material-icons align-items-center" style="font-size: 12px;">&#xE8CC;</i> Add to cart </a>
 										</div>
 									</div>
 								</div>
@@ -193,7 +203,7 @@ translateX(
 						</div>
 					</c:forEach>
 				</div>
-			</div>
+			</div>	
 
 
 		</div>

@@ -38,22 +38,26 @@ img {
 			<input type="hidden" id="currBookID" name="currBookID">
 			<div class="table-wrapper">
 				<div class="table-title">
-    <div class="row">
-        <div class="col-sm-6">
-            <h2>
-                Manage <b>Product</b>
-            </h2>
-        </div>
-        <div class="col-sm-6 text-right" style="margin-top: 18px;"> <!-- Sử dụng margin-top để dịch chuyển nút xuống dưới -->
-            <button type="submit" class="btn btn-success" name="button" value="add">
-                <i class="material-icons">&#xE147;</i> <span>Add New Product</span>
-            </button>
-            <button type="submit" class="btn btn-primary" name="button" value="close">
-                <i class="material-icons">&#xE88A;</i> Home
-            </button>
-        </div>
-    </div>
-</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<h2>
+								Manage <b>Product</b>
+							</h2>
+						</div>
+						<div class="col-sm-6 text-right" style="margin-top: 18px;">
+							<!-- Sử dụng margin-top để dịch chuyển nút xuống dưới -->
+							<button type="submit" class="btn btn-success" name="button"
+								value="add">
+								<i class="material-icons">&#xE147;</i> <span>Add New
+									Product</span>
+							</button>
+							<button type="submit" class="btn btn-primary" name="button"
+								value="close">
+								<i class="material-icons">&#xE88A;</i> Home
+							</button>
+						</div>
+					</div>
+				</div>
 
 				<table class="table table-striped table-hover">
 					<thead>
@@ -77,13 +81,17 @@ img {
 								<td>${balo.mota}</td>
 								<td>
 									<div style="display: flex; gap: 10px;">
-    <button type="submit" class="btn btn-primary" name="button" value="edit" style="display: flex; align-items: center; justify-content: center;">
-        <i class="material-icons" style="font-size: 18px;">&#xE254;</i>
-    </button>
-    <button type="submit" class="btn btn-danger" name="button" value="delete" style="display: flex; align-items: center; justify-content: center;">
-        <i class="material-icons" style="font-size: 18px;">&#xE872;</i>
-    </button>
-</div>
+										<button type="submit" class="btn btn-primary" name="button"
+											value="edit"
+											style="display: flex; align-items: center; justify-content: center;">
+											<i class="material-icons" style="font-size: 18px;">&#xE254;</i>
+										</button>
+										<button type="submit" class="btn btn-danger" name="button"
+											value="delete"
+											style="display: flex; align-items: center; justify-content: center;">
+											<i class="material-icons" style="font-size: 18px;">&#xE872;</i>
+										</button>
+									</div>
 
 								</td>
 							</tr>
@@ -91,16 +99,16 @@ img {
 					</tbody>
 				</table>
 		</form>
-		
 
-	<p class="float-left">
-		<a class="btn btn-primary" href="#">Back to top</a>
-	</p>
-	<script src="js/manager.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		function rowClick(e) {
-			document.getElementById("currBookID").value = e.id;
-		}
-	</script>
+
+		<p class="float-left">
+			<a class="btn btn-primary" href="#">Back to top</a>
+		</p>
+		<script src="js/manager.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			function rowClick(e) {
+				document.getElementById("currBookID").value = e.id;
+			}
+		</script>
 </body>
 </html>

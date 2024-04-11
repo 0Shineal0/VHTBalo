@@ -22,6 +22,14 @@ public class Balo implements java.io.Serializable {
 		this.price = price;
 		this.mota = mota;
 	}
+	
+	public Balo(String id, String image, String name, double price) {
+		super();
+		this.id = id;
+		this.image = image;
+		this.name = name;
+		this.price = price;
+	}
 
 	public String getMota() {
 		return mota;

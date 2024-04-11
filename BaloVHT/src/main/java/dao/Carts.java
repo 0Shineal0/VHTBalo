@@ -1,5 +1,6 @@
 package dao;
-import java.sql.Connection; 
+
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -8,14 +9,14 @@ import java.util.List;
 
 import model.Balo;
 import utils.DataHelper;
-public class Balos {
-	private static final String SELECT_BY_ID = "select id,image,name,price,mota from balovht.balo where id =?";
-	private static final String SELECT_ALL = "select * from balovht.balo";
-	private static final String DELETE = "delete from balovht.balo where id = ?;";
-	private static final String UPDATE = "update balovht.balo set image = ?, name = ?,price= ?, mota = ? where id = ?;";
-	private static final String INSERT = "insert into balovht.balo(id,image,name,price,mota) value (?, ?, ?, ?, ?) ;";
-	private static final String SELECT_ALL_CART = "select * from balovht.cart";
 
+public class Carts {
+	private static final String SELECT_BY_ID = "select id,image,name,price,mota from balovht.cart where id =?";
+	private static final String SELECT_ALL = "select * from balovht.cart";
+	private static final String DELETE = "delete from balovht.cart where id = ?;";
+	private static final String UPDATE = "update balovht.cart set image = ?, name = ?,price= ?, mota = ? where id = ?;";
+	private static final String INSERT = "insert into balovht.cart(id,image,name,price,mota) value (?, ?, ?, ?, ?) ;";
+	
 	public static Balo getBalo(String id) {
 		try {
 			Connection conn = DataHelper.getConnection();
@@ -61,23 +62,6 @@ public class Balos {
 	
 	public static List<Balo> getAllCart() {
 		List<Balo> balos = new ArrayList<>();
-		try {
-			Connection conn = DataHelper.getConnection();
-			Statement stmt = null;
-			stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery(SELECT_ALL_CART);
-			while (rs.next()) {
-				String id = rs.getString("id");
-				String name = rs.getString("name");
-				String image = rs.getString("image");
-				double price =  rs.getDouble("price");
-				String mota = rs.getString("mota");
-				balos.add(new Balo(id,image, name, price, mota));
-			}
-
-			}catch (Exception e) {
-				e.printStackTrace();
-		}
 		return balos;
 	}
 	
@@ -158,15 +142,7 @@ public class Balos {
 
 	
 	public static boolean save(Balo balo) {
-		try {
-			if( isExist(balo))
-				return update(balo);
-			else
-				return create(balo);
-		}catch (Exception e) {
-			return false;
-		} 
-		
+				return create(balo);	
 	}
 	public static boolean isExist(Balo balo) {
 		try {
@@ -183,9 +159,9 @@ public class Balos {
 		}
 		return false;
 	}
-
-	public static String getSelectAllCart() {
-		return SELECT_ALL_CART;
+	public Carts() {
+		// TODO Auto-generated constructor stub
 	}
+
 	
 }
